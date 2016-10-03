@@ -23,26 +23,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! MyTableViewCell
         
         let row = indexPath.row
         
-        let computerNameLabel = cell.viewWithTag(1) as! UILabel
-        computerNameLabel.text = computers[row]
-
-        let modelLabel = cell.viewWithTag(2) as! UILabel
+        cell.nameLabel.text = computers[row]
         if row < 6 {
-            modelLabel.text = "Desktop"
-        }
-        else{
-            modelLabel.text = "Portable"
+            cell.typeLabel.text = "Desktop"
+            }
+        else {
+            cell.typeLabel.text = "Portable"
         }
         
-        let imageName = computers[row]
+        let imageName = computers [row]
         let fullImageName = imageName.appending(".png")
-        let myImage = UIImage(named:fullImageName)
-        let computerImageView = cell.viewWithTag(3) as! UIImageView
-        computerImageView.image = myImage
+        let myImage = UIImage(named: fullImageName)
+        cell.computerImage.image = myImage
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

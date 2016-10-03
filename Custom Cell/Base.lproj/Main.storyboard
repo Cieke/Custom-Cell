@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customCell" id="R9W-Mf-UlU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customCell" id="R9W-Mf-UlU" customClass="MyTableViewCell" customModule="Custom_Cell" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R9W-Mf-UlU" id="fNB-0T-eoL">
@@ -64,6 +64,11 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="computerImage" destination="dYy-ni-MbN" id="UYU-Wo-DTV"/>
+                                            <outlet property="nameLabel" destination="34P-wX-azi" id="Oed-wr-Yev"/>
+                                            <outlet property="typeLabel" destination="t7I-Vd-lZk" id="jgT-k8-Zlg"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
